@@ -78,7 +78,7 @@ async function handleSMS(body) {
     } else if (lead.interest === 'full_automation') {
         reply = `Thanks! Full automation can transform your business. Let's chat about your needs - I'll text you shortly. - Alex @ ATX AI Solutions`;
     } else if (lead.interest === 'consultation') {
-        reply = `Great choice! Book your free 30-min strategy session here: https://calendly.com/alex-atxaisolutions/30min - Alex @ ATX AI Solutions`;
+        reply = `Great choice! Get your AI Automation Audit here: https://buy.stripe.com/00w3cu84Afqw03qb7QaMU01 - Delivered via email within 24hrs. - Alex @ ATX AI Solutions`;
     } else {
         reply = `Thanks for texting ATX AI Solutions! I'm Alex - I'll reach out shortly to see how we can help automate your business. Text STOP to unsubscribe.`;
     }

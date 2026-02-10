@@ -332,16 +332,17 @@
             </div>
             
             <div class="service-card">
-                <h3>📋 Strategy Session</h3>
+                <h3>📋 AI Automation Audit</h3>
                 <div class="price">$500</div>
-                <p>2-hour deep-dive consultation. We'll analyze your business processes and deliver a custom AI automation roadmap you can implement.</p>
+                <p>Custom automation roadmap delivered within 24 hours. No meetings required — everything via email.</p>
                 <ul style="margin: 20px 0; padding-left: 20px; color: #86868b;">
-                    <li>Process audit</li>
+                    <li>Business process analysis</li>
                     <li>Automation opportunities</li>
                     <li>ROI calculation</li>
                     <li>Implementation roadmap</li>
+                    <li>Delivered via email in 24hrs</li>
                 </ul>
-                <button class="buy-button" onclick="checkout('consultation')">Book Now</button>
+                <button class="buy-button" onclick="checkout('consultation')">Get My Audit</button>
             </div>
         </div>
     </section>
@@ -430,7 +431,7 @@
         const paymentLinks = {
             chatbot: 'https://buy.stripe.com/6oU7sKesYfqweYk1xgaMU00',
             full: 'https://buy.stripe.com/9B6cN4acI3HOaI45NwaMU02',
-            consultation: 'https://calendly.com/alex-atxaisolutions/30min'
+            consultation: 'https://buy.stripe.com/00w3cu84Afqw03qb7QaMU01'
         };
         
         function checkout(service) {
@@ -442,7 +443,7 @@
                 const subjects = {
                     chatbot: 'Interested in AI Chatbot Setup',
                     full: 'Interested in Full Automation Package',
-                    consultation: 'Booking Strategy Session'
+                    consultation: 'AI Automation Audit Request'
                 };
                 const subject = encodeURIComponent(subjects[service] || 'Service Inquiry');
                 window.location.href = `mailto:alex@atxaisolutions.net?subject=${subject}`;
