@@ -1,1 +1,25 @@
-{"version":2}
+{
+  "version": 2,
+  "name": "atx-ai-sms-webhook",
+  "builds": [
+    {
+      "src": "api/sms.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/sms",
+      "dest": "/api/sms.js"
+    },
+    {
+      "src": "/health",
+      "dest": "/api/sms.js"
+    }
+  ],
+  "env": {
+    "TWILIO_ACCOUNT_SID": "@twilio_account_sid",
+    "TWILIO_AUTH_TOKEN": "@twilio_auth_token",
+    "TWILIO_PHONE_NUMBER": "@twilio_phone_number"
+  }
+}

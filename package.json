@@ -1,19 +1,14 @@
 {
-  "name": "project-x",
+  "name": "atx-ai-sms-webhook",
   "version": "1.0.0",
-  "main": "stripe.js",
+  "description": "Twilio SMS Webhook for ATX AI Solutions",
+  "main": "api/sms.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vercel dev",
+    "deploy": "vercel --prod"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "cors": "^2.8.6",
-    "express": "^5.2.1",
-    "nodemailer": "^8.0.1",
-    "stripe": "^20.3.1",
-    "twilio": "^5.12.1"
+  "dependencies": {},
+  "devDependencies": {
+    "vercel": "latest"
   }
 }
