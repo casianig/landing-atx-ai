@@ -40,6 +40,15 @@
         
         .logo span { color: #007aff; }
         
+        .sms-badge {
+            background: #34c759;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
         .hero {
             padding: 150px 40px 80px;
             text-align: center;
@@ -73,6 +82,30 @@
             box-shadow: 0 4px 20px rgba(0,122,255,0.3);
         }
         
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(0,122,255,0.4);
+        }
+        
+        .sms-cta {
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(52, 199, 89, 0.1);
+            border-radius: 16px;
+            border: 2px dashed #34c759;
+        }
+        
+        .sms-cta p {
+            margin-bottom: 10px;
+            color: #1d1d1f;
+        }
+        
+        .sms-number {
+            font-size: 28px;
+            font-weight: 700;
+            color: #34c759;
+        }
+        
         .services {
             padding: 80px 40px;
             max-width: 1200px;
@@ -98,6 +131,11 @@
             padding: 40px;
             border: 1px solid rgba(255,255,255,0.3);
             box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
         }
         
         .service-card h3 {
@@ -112,6 +150,12 @@
             margin-bottom: 15px;
         }
         
+        .price-note {
+            font-size: 14px;
+            color: #86868b;
+            font-weight: 400;
+        }
+        
         .buy-button {
             width: 100%;
             padding: 14px;
@@ -122,6 +166,104 @@
             font-size: 16px;
             font-weight: 600;
             cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .buy-button:hover {
+            background: #0051d5;
+        }
+        
+        .how-it-works {
+            padding: 80px 40px;
+            background: white;
+        }
+        
+        .how-it-works h2 {
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 60px;
+        }
+        
+        .steps {
+            max-width: 800px;
+            margin: 0 auto;
+            display: grid;
+            gap: 30px;
+        }
+        
+        .step {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+        
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: #007aff;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        
+        .step h3 {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+        
+        .step p {
+            color: #86868b;
+        }
+        
+        .guarantee {
+            padding: 60px 40px;
+            text-align: center;
+            background: linear-gradient(135deg, #007aff 0%, #5856d6 100%);
+            color: white;
+        }
+        
+        .guarantee h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        
+        .guarantee p {
+            font-size: 18px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .faq {
+            padding: 80px 40px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq h2 {
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 60px;
+        }
+        
+        .faq-item {
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+        
+        .faq-item h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .faq-item p {
+            color: #86868b;
         }
         
         footer {
@@ -129,57 +271,179 @@
             text-align: center;
             color: #86868b;
         }
+        
+        footer a {
+            color: #007aff;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
     <header>
         <nav>
             <div class="logo">ATX<span>AI</span> Solutions</div>
+            <div class="sms-badge">💬 Text Us</div>
         </nav>
     </header>
     
     <section class="hero">
         <h1>AI Automation for Austin Businesses</h1>
-        <p>Stop drowning in repetitive tasks. Automate your customer service, scheduling, and operations with custom AI solutions.</p>
+        <p>Stop drowning in repetitive tasks. Automate your customer service, scheduling, and operations with custom AI solutions built for Austin service businesses.</p>
         <a href="#services" class="cta-button">View Services</a>
+        
+        <div class="sms-cta">
+            <p>📱 Quick question? Text <strong>START</strong> to</p>
+            <div class="sms-number" id="sms-number">[YOUR TWILIO NUMBER]</div>
+            <p style="font-size: 14px; margin-top: 10px; color: #86868b;">Get a free AI automation guide + consultation offer</p>
+        </div>
     </section>
     
     <section class="services" id="services">
-        <h2>Our Services</h2>
+        <h2>Choose Your Service</h2>
         <div class="service-grid">
             <div class="service-card">
-                <h3>AI Chatbot Setup</h3>
+                <h3>🤖 AI Chatbot Setup</h3>
                 <div class="price">$2,000</div>
-                <p>Custom AI chatbot for customer service, booking, and lead qualification.</p>
+                <p>Custom AI chatbot that handles customer service, appointment booking, and lead qualification 24/7. Integrates with your existing systems.</p>
+                <ul style="margin: 20px 0; padding-left: 20px; color: #86868b;">
+                    <li>Trained on your business</li>
+                    <li>Website & SMS integration</li>
+                    <li>Appointment scheduling</li>
+                    <li>Lead capture & qualification</li>
+                </ul>
                 <button class="buy-button" onclick="checkout('chatbot')">Get Started</button>
             </div>
             
             <div class="service-card">
-                <h3>Full Automation</h3>
-                <div class="price">$2,000 + $1,000/mo</div>
-                <p>Complete automation suite with ongoing support and optimization.</p>
+                <h3>⚡ Full Automation</h3>
+                <div class="price">$2,000 <span class="price-note">+ $1,000/mo</span></div>
+                <p>Complete business automation suite. We handle everything from setup to ongoing optimization, reporting, and improvements.</p>
+                <ul style="margin: 20px 0; padding-left: 20px; color: #86868b;">
+                    <li>Everything in Chatbot</li>
+                    <li>Email automation</li>
+                    <li>CRM integration</li>
+                    <li>Monthly optimization</li>
+                    <li>Priority support</li>
+                </ul>
                 <button class="buy-button" onclick="checkout('full')">Get Started</button>
             </div>
             
             <div class="service-card">
-                <h3>Strategy Session</h3>
+                <h3>📋 Strategy Session</h3>
                 <div class="price">$500</div>
-                <p>2-hour consultation with custom AI automation roadmap.</p>
+                <p>2-hour deep-dive consultation. We'll analyze your business processes and deliver a custom AI automation roadmap you can implement.</p>
+                <ul style="margin: 20px 0; padding-left: 20px; color: #86868b;">
+                    <li>Process audit</li>
+                    <li>Automation opportunities</li>
+                    <li>ROI calculation</li>
+                    <li>Implementation roadmap</li>
+                </ul>
                 <button class="buy-button" onclick="checkout('consultation')">Book Now</button>
             </div>
         </div>
     </section>
     
+    <section class="how-it-works">
+        <h2>How It Works</h2>
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div>
+                    <h3>Book a Free Discovery Call</h3>
+                    <p>Text us or book a consultation. We'll discuss your business, pain points, and goals.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div>
+                    <h3>Get a Custom Plan</h3>
+                    <p>We analyze your needs and propose a tailored AI automation solution with clear ROI.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div>
+                    <h3>We Build & Launch</h3>
+                    <p>Our team builds your solution, trains it on your business, and integrates with your tools.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <div>
+                    <h3>You Save Time & Money</h3>
+                    <p>Your AI handles repetitive tasks 24/7. You focus on growing your business.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="guarantee">
+        <h2>🎯 100% Satisfaction Guarantee</h2>
+        <p>If you're not happy with your AI solution within 30 days, we'll refund 100% of your money. No questions asked. We only win when you win.</p>
+    </section>
+    
+    <section class="faq">
+        <h2>Common Questions</h2>
+        
+        <div class="faq-item">
+            <h3>How long does setup take?</h3>
+            <p>Most chatbots are live within 1-2 weeks. Full automation projects typically take 3-4 weeks depending on complexity.</p>
+        </div>
+        
+        <div class="faq-item">
+            <h3>Do I need technical knowledge?</h3>
+            <p>Nope. We handle all the technical work. You just need to know your business processes — we'll translate that into automation.</p>
+        </div>
+        
+        <div class="faq-item">
+            <h3>What if the AI makes mistakes?</h3>
+            <p>We train your AI specifically on your business and monitor performance. It learns from feedback and improves over time. You can always override or pause it.</p>
+        </div>
+        
+        <div class="faq-item">
+            <h3>Can I integrate with my existing tools?</h3>
+            <p>Yes. We integrate with most popular tools: Calendly, Square, Stripe, HubSpot, Salesforce, Zapier, and more.</p>
+        </div>
+        
+        <div class="faq-item">
+            <h3>Is there ongoing support?</h3>
+            <p>Full Automation includes monthly optimization and priority support. Chatbot Setup includes 30 days of support post-launch.</p>
+        </div>
+    </section>
+    
     <footer>
-        <p>&copy; 2026 ATX AI Solutions | Austin, TX | alex@atxaisolutions.net</p>
+        <p>📱 Text <strong>START</strong> to <span id="footer-sms">[YOUR NUMBER]</span></p>
+        <p style="margin-top: 10px;">📧 <a href="mailto:alex@atxaisolutions.net">alex@atxaisolutions.net</a></p>
+        <p style="margin-top: 20px;">&copy; 2026 ATX AI Solutions | Austin, TX</p>
     </footer>
     
     <script>
-        const stripe = Stripe('pk_live_51SzGxKASX7kt1xaGvuKWk8x78et96f6JILlTIAZ3up49BMihFgy5vHhcj6OwCw51173H8B9iFVMerY5f6WpUCg2t00dPPwE52B');
+        // Update with your Twilio number
+        const TWILIO_NUMBER = '+1 (636) 238-2554';
+        document.getElementById('sms-number').textContent = TWILIO_NUMBER;
+        document.getElementById('footer-sms').textContent = TWILIO_NUMBER;
         
-        async function checkout(service) {
-            // Live checkout coming soon
-            alert('Contact alex@atxaisolutions.net to get started with ' + service);
+        // Stripe Payment Links - Live payment links from ATX AI Solutions Stripe account
+        const paymentLinks = {
+            chatbot: 'https://buy.stripe.com/6oU7sKesYfqweYk1xgaMU00',
+            full: 'https://buy.stripe.com/9B6cN4acI3HOaI45NwaMU02',
+            consultation: 'https://buy.stripe.com/00w3cu84Afqw03qb7QaMU01'
+        };
+        
+        function checkout(service) {
+            const link = paymentLinks[service];
+            if (link && !link.includes('YOUR_')) {
+                window.location.href = link;
+            } else {
+                // Fallback: open email with pre-filled subject
+                const subjects = {
+                    chatbot: 'Interested in AI Chatbot Setup',
+                    full: 'Interested in Full Automation Package',
+                    consultation: 'Booking Strategy Session'
+                };
+                const subject = encodeURIComponent(subjects[service] || 'Service Inquiry');
+                window.location.href = `mailto:alex@atxaisolutions.net?subject=${subject}`;
+            }
         }
     </script>
 </body>
