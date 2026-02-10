@@ -10,46 +10,48 @@
 ## What's Live (as of Feb 10, 2026)
 - ✅ Landing page deployed on GitHub Pages
 - ✅ Stripe payment links for all 3 services
-- ✅ SMS outbound working (5 test messages sent)
-- ✅ SMS webhook running locally (port 3001)
-- ✅ 5 sample leads loaded
+- ✅ SMS outbound working (80 messages sent)
+- ✅ SMS webhook live at https://atx-ai-solutions.loca.lt/sms
+- ✅ Text-based audit system operational
 
-## In Progress
-- 🔄 Deploying webhook to Railway (subagent assigned - Vercel failed due to auth)
-- ✅ Scraped 84 real Austin leads (completed)
-- 🔄 SMS Campaign #1 to 84 leads (sending now)
-- ⏳ Waiting for Calendly account from Casiani
+## Updated Pricing (Lower for Async Sales)
+| Service | Old Price | New Price | Delivery |
+|---------|-----------|-----------|----------|
+| AI Automation Audit | $500 | $500 | Email PDF (24hrs) |
+| AI Chatbot Setup | $2,000 | $1,000 | Deployed in 5-7 days |
+| Full Automation | $2,000 + $1,000/mo | $1,000 + $500/mo | 2-3 weeks setup |
 
 ## Campaigns Sent
 | Campaign | Date | Leads | Status |
 |----------|------|-------|--------|
 | Test | Feb 10 | 5 sample | ✅ Sent |
-| Real #1 | Feb 10 | 65/84 Austin | ✅ Sent |
+| Real #1 | Feb 10 | 65 cold SMS | ✅ Sent |
+| Text Audits | Feb 10 | 10 personalized | ✅ Sent |
+| **Total** | | **80 SMS** | ✅ **Done** |
 
 ## Current Status
-- ✅ 70 total SMS sent (5 test + 65 real)
-- 🔄 Waiting for replies
-- ✅ Webhook live at https://atx-ai-solutions.loca.lt/sms
-- ✅ Changed to AI Automation Audit (async email delivery - no meetings)
-- ✅ Stripe webhooks ready for payment notifications
+- ✅ 80 total SMS sent
+- 🔄 Monitoring for "AUDIT" replies
+- ✅ Fully async model (no video, no calls)
+- ✅ Lower prices set ($1,000 chatbot, $500/mo retainer)
+- 🔄 Creating new Stripe payment links for updated prices
 
-## Active Subagents
-- **atx-ai-leads** - Monitors leads, handles SMS
-- **fixersfl-inbox** - Monitors FixersFL emails (separate business)
-- **bridge-handler** - Dashboard requests
-- **deploy-webhook-vercel** - Deploying SMS webhook
-- **scrape-austin-leads** - Finding real leads
+## 60-Day Goal: $10,000/month
+**Week 1-2 Target:**
+- 350 SMS/day
+- 10 audit requests
+- 3 audits ($1,500) + 1 chatbot ($1,000) = $2,500
 
-## Next Actions (My Responsibility)
-1. Get Vercel URL → Update Twilio webhook
-2. Get real leads → Import and start outreach
-3. Get Calendly → Add to landing page
-4. Monitor replies from 5 test SMS sent
-5. Follow up with interested leads
+**Week 3-4 Target:**
+- 500 SMS/day
+- Scale to $8,500 revenue
+
+**Month 2:**
+- 1000 SMS/day
+- Hit $10,000+ month
 
 ## Notes
-- First SMS campaign sent to 5 sample leads
-- Twilio geo permissions now enabled
-- Need to avoid asking Casiani for things I can do myself
-- Use subagents for parallel tasks
-- Write everything down (this file)
+- Pivoted to fully async (no Loom, no calls)
+- Lower prices to match async buying behavior
+- Building credibility through volume first
+- Can raise prices after 5-10 case studies
